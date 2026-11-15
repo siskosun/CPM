@@ -5,13 +5,13 @@
 - Added a geometric edge-cubie model using sticker normals and slot-dependent EO classification.
 - Defined the standard ZZ EO-preserving face-turn generators: `R`, `L`, `U`, `D`, `F2`, `B2` and inverses.
 - Added a geometric `M` slice operation to demonstrate that a quarter-turn of the middle slice does not preserve this EO convention.
-- Added tests for move inverses, four-quarter-turn identity, EO-preserving generators, F/B quarter-turn effects, and even EO parity.
+- Added tests for move inverses, four-quarter-turn identity, EO-preserving generators, F/B quarter-turn effects, even EO parity, and preservation of EO from generated EO states.
 
 ### Validation
 
 `python -m unittest discover -s tests -v`
 
-Result: 11 tests passed.
+Result: 12 tests passed locally. The added property test generates 40 EO states using 20 random moves from the EO-preserving generator set, then checks every generator on each state. The repository PR does not yet have a reported CI status; local validation is not remote CI.
 
 ### Important implementation correction
 
